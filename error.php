@@ -1,7 +1,9 @@
 <?php
 
+// Get status code from SERVER.
 $status = $_SERVER['REDIRECT_STATUS'];
 
+// Array with statuscodes, each containing a title and a message.
 $codes = array(
        403 => array('403 - Forbidden', 'The page you were trying to reach is absolutely forbidden for some reason.'),
        404 => array('404 - Not Found', 'The page or file you tried to access can not be found on this Raspberry Pi...'),
@@ -9,8 +11,11 @@ $codes = array(
        503 => array('503 - Service Unavailable', 'Shouldn\'t have used Duct Tape to wall-mount my Raspberry...'),
 );
 
+// Get the title and message based on the status code.
 $title = $codes[$status][0];
 $message = $codes[$status][1];
+
+// Alter message if the status code does not exist in the array.
 if ($title == false || strlen($status) != 3) {
        $message = 'Please supply a valid status code.';
 }
