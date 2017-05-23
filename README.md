@@ -1,9 +1,13 @@
 # Error-Page-Raspberry
 Custom error page for Apache2, with a Raspberry look and feel.
 
+## Preview
+
+![alt text](https://github.com/marc0tjevp/Error-Page-Raspberry/raw/develop/preview.png "404 page")
+
 ## Usage
 
-### Add errorpage to Apache Config.
+### Configure Apache to use custom error documents
 You can add the following lines to your Apache config or .htaccess.
 
 More information about handling custom error pages can be found in the [Apache Documentation](https://httpd.apache.org/docs/2.4/custom-error.html)
@@ -13,7 +17,7 @@ ErrorDocument 404 /error/error.php
 ErrorDocument ...
 ```
 
-### Adding status codes.
+### Adding status codes
 You can add status codes to the page by adding a array to the $codes variable.
 ``` php
 403 => array('403 - Forbidden', 'The page you were trying to reach is absolutely forbidden for some reason.'),
