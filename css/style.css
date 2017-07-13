@@ -1,28 +1,66 @@
 body {
-  background-color: #8f2342;
-  color: #ffffff;
-  overflow: hidden;
+    background-color: #8F2342;
+    color:            #FFFFFF;
+    overflow:         hidden;
 }
 
 .vertical-center {
-  min-height: 100%;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
+    min-height:  100%;
+    min-height:  100vh;
+    display:     flex;
+    align-items: center;
 }
 
 .img-raspberry {
-  padding: 10px;
-  max-height: 240px;
+    padding:    10px;
+    max-height: 240px;
 }
 
 .btn-raspberry {
-  color: #ffffff;
-  background-color: #66172e;
-  border: none;
+    color:            #FFFFFF;
+    background-color: #66172E;
+    border:           none;
+}
+
+.btn-raspberry[data-statuscode*="200"]:after {
+    content: "after"
+}
+
+.btn-raspberry[data-statuscode*="403"] {
+    background-color: #286090;
+}
+
+.btn-raspberry[data-statuscode*="403"]:after {
+    content: "fourothree coming right at you";
+}
+
+.btn-raspberry[data-statuscode*="404"] {
+    background-color: #74903A;
+}
+
+.btn-raspberry[data-statuscode*="404"]:after {
+    content: "fourofour coming right at you";
+}
+
+.btn-raspberry[data-statuscode*="500"] {
+    background-color: #7D2390;
+
+}
+
+.btn-raspberry[data-statuscode*="500"]:after {
+    content: "fivehundered coming right at you";
+}
+
+.btn-raspberry[data-statuscode*="504"] {
+    background-color: #3D9043;
+}
+
+.btn-raspberry[data-statuscode*="504"]:after {
+    background-color: #3D9043;
 }
 
 .btn-raspberry:hover {
-  color: #ffffff;
-  background-color: #6b293d;
+    color:            #FFFFFF;
+    background-color: #6B293D;
 }
+
