@@ -27,17 +27,17 @@ The first entry is the title which shows as an h3 tag on the page. The second en
 ### Adding buttons
 You can also add buttons for specific status codes. You can add the link for this button in the array.
 
-``php
-500 => array('500 - Internal Server Error', 'The request was unsuccessful due to an unexpected condition encountered by the server.', "reportbug.php"),
-``
+```php
+500 => array('500 - Internal Server Error', 'The request was unsuccessful due to an unexpected condition encountered by the server.', "reportbug.php")
+```
 
 The title of the button is handeled in the style.css file.
 
-``css
+```css
 .btn-raspberry[data-statuscode*="500"]:after {
     content: "Report a bug";
 }
-``
+```
 
 ### File paths
 In the error.php file, change the standard "/error/" in all file paths to your folder. You can also use "$_SERVER['DOCUMENT_ROOT']" if you need to.
