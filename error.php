@@ -45,7 +45,7 @@ if ($title == false || strlen($status) != 3) {
             <h3><?php echo $title ?></h3>
             <p><?php echo $message ?></p>
 
-            <a class="btn btn-raspberry" data-statuscode="<?php echo $status ?>">Go back</a>
+            <a class="btn btn-raspberry" data-statuscode="<?php echo $status ?>"></a>
 
           </div>
         </div>
