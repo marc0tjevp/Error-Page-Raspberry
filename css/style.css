@@ -22,45 +22,35 @@ body {
     border:           none;
 }
 
-.btn-raspberry[data-statuscode*="200"]:after {
-    content: "after"
-}
-
-.btn-raspberry[data-statuscode*="403"] {
-    background-color: #286090;
-}
-
-.btn-raspberry[data-statuscode*="403"]:after {
-    content: "fourothree coming right at you";
-}
-
-.btn-raspberry[data-statuscode*="404"] {
-    background-color: #74903A;
-}
-
-.btn-raspberry[data-statuscode*="404"]:after {
-    content: "fourofour coming right at you";
-}
-
-.btn-raspberry[data-statuscode*="500"] {
-    background-color: #7D2390;
-
-}
-
-.btn-raspberry[data-statuscode*="500"]:after {
-    content: "fivehundered coming right at you";
-}
-
-.btn-raspberry[data-statuscode*="504"] {
-    background-color: #3D9043;
-}
-
-.btn-raspberry[data-statuscode*="504"]:after {
-    background-color: #3D9043;
-}
-
 .btn-raspberry:hover {
     color:            #FFFFFF;
     background-color: #6B293D;
 }
 
+.btn-raspberry:focus {
+    color: #FFFFFF;
+}
+
+.btn-raspberry[data-statuscode=""] {
+    display: none;
+}
+
+.btn-raspberry[data-statuscode*="200"] {
+    display: none;
+}
+
+.btn-raspberry[data-statuscode*="403"]:after {
+    content: "Homepage";
+}
+
+.btn-raspberry[data-statuscode*="404"]:after {
+    content: "Homepage";
+}
+
+.btn-raspberry[data-statuscode*="500"]:after {
+    content: "Report a bug";
+}
+
+.btn-raspberry[data-statuscode*="503"]:after {
+    content: "Report a bug";
+}

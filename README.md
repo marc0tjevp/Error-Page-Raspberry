@@ -18,11 +18,26 @@ ErrorDocument ...
 ```
 
 ### Adding status codes
-You can add status codes to the page by adding a array to the $codes variable.
+You can add status codes to the page by adding an array to the $codes variable.
 ``` php
 403 => array('403 - Forbidden', 'The page you were trying to reach is absolutely forbidden for some reason.'),
 ```
 The first entry is the title which shows as an h3 tag on the page. The second entry is the description right beneath it.
+
+### Adding buttons
+You can also add buttons for specific status codes. You can add the link for this button in the array.
+
+``php
+500 => array('500 - Internal Server Error', 'The request was unsuccessful due to an unexpected condition encountered by the server.', "reportbug.php"),
+``
+
+The title of the button is handeled in the style.css file.
+
+``css
+.btn-raspberry[data-statuscode*="500"]:after {
+    content: "Report a bug";
+}
+``
 
 ### File paths
 In the error.php file, change the standard "/error/" in all file paths to your folder. You can also use "$_SERVER['DOCUMENT_ROOT']" if you need to.

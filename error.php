@@ -1,15 +1,15 @@
 <?php
 
 // Get status code from SERVER.
-//$status = $_SERVER['REDIRECT_STATUS'];
-$status = 500;
+$status = $_SERVER['REDIRECT_STATUS'];
 
 // Array with statuscodes, each containing a title and a message.
 $codes = array(
-       403 => array('403 - Forbidden', 'The page you were trying to reach is absolutely forbidden for some reason.', "http://www.google.com"),
-       404 => array('404 - Not Found', 'The page or file you tried to access can not be found on this Raspberry Pi...', "http://www.facebook.com"),
-       500 => array('500 - Internal Server Error', 'The request was unsuccessful due to an unexpected condition encountered by the server.', "http://www.youtube.com"),
-       503 => array('503 - Service Unavailable', 'Shouldn\'t have used Duct Tape to wall-mount my Raspberry...', "http://www.apple.com"),
+  200 => array('200 - OK!', 'The server is up and running!'),
+  403 => array('403 - Forbidden', 'The page you were trying to reach is absolutely forbidden for some reason.', "index.php"),
+  404 => array('404 - Not Found', 'The page or file you tried to access can not be found on this Raspberry Pi...', "index.php"),
+  500 => array('500 - Internal Server Error', 'The request was unsuccessful due to an unexpected condition encountered by the server.', "#"),
+  503 => array('503 - Service Unavailable', 'Shouldn\'t have used Duct Tape to wall-mount my Raspberry...', "#"),
 );
 
 
@@ -20,7 +20,8 @@ $link = $codes[$status][2];
 
 // Alter message if the status code does not exist in the array.
 if ($title == false || strlen($status) != 3) {
-       $message = 'Please supply a valid status code.';
+  $title = 'What happened?!';
+  $message = 'Something weird happend and we don\'t know what to do...';
 }
 
 ?>
@@ -47,6 +48,7 @@ if ($title == false || strlen($status) != 3) {
             <h3><?php echo $title ?></h3>
             <p><?php echo $message ?></p>
 
+            <a class="btn btn-raspberry" href="javascript:history.back()">Go Back</a>
             <a class="btn btn-raspberry" href="<?php echo $link ?>" data-statuscode="<?php echo $status ?>"></a>
 
           </div>
