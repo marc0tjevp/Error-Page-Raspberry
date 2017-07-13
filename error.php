@@ -34,6 +34,7 @@ if ($title == false || strlen($status) != 3) {
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/bootstrap.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <link href="img/favicon.ico" rel="icon" type="image/x-icon"/>
     <title><?php echo $title ?></title>
   </head>
 
