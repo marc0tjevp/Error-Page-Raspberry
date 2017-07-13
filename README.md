@@ -26,3 +26,6 @@ The first entry is the title which shows as an h3 tag on the page. The second en
 
 ### File paths
 In the error.php file, change the standard "/error/" in all file paths to your folder. You can also use "$_SERVER['DOCUMENT_ROOT']" if you need to.
+
+# Contributors
+- [Bas van Driel](https://www.github.com/basvandriel) ([@bvandriel](https://www.twitter.com/bvandriel))
